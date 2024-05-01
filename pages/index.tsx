@@ -10,6 +10,10 @@ import AdvancePayTracker from "@/public/Advance Pay Tracker.png";
 import PaymentTrackers from "@/public/Payment Trackers.png";
 import MonthlyPayslip from "@/public/Monthly Payslip.png";
 import Kochi from "@/public/Kochi.png";
+import cuate from "@/public/cuate.png";
+import Logo from "@/public/logo.png";
+import PlayStore from "@/public/Google Play Badge.png";
+import AppStore from "@/public/App Store Badge.png";
 import EmployeeCard from "@/public/Employee card.png";
 import Bengaluru from "@/public/Bengaluru.png";
 import JobSeeker from "@/public/Job Seekers.png";
@@ -225,6 +229,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      {/* Employee card */}
       <div className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-lg border bg-black p-20 md:shadow-xl">
         <div>
           <p className="z-10 whitespace-pre-wrap text-center text-5xl font-medium tracking-tighter text-white">
@@ -249,6 +254,92 @@ export default function Home() {
         </div>
         <Ripple />
       </div>
+      {/* Contact Us */}
+      <div className="bg-white flex items-center gap-16 py-16 justify-center">
+        <div>
+          <Image src={cuate} alt=""></Image>
+        </div>
+        <div className="flex flex-col items-end justify-end capitalize gap-6">
+          <h1 className=" text-5xl font-bold text-right rtl:text-left leading-snug">
+            Our support team is <br />{" "}
+            <span className=" italic">active 24x7</span>
+          </h1>
+          <p className=" font-medium text-2xl text-right rtl:text-left leading-snug">
+            Feel free to chat with our support team whenever <br /> you need
+            more clarity
+          </p>
+        </div>
+      </div>
+      {/* Footer */}
+      <footer className="bg-[#F2F1EE] flex flex-col items-center py-10 gap-4">
+        <div className="flex justify-between gap-[40rem]">
+          <div className="flex flex-col">
+            <div>
+              <Image src={Logo} alt=""></Image>
+            </div>
+            <div>
+              <h1 className="text-xl font-bold pb-10">
+                Upgrade your hiring process with kaamhai. <br /> Designed with
+                verified databases
+              </h1>
+            </div>
+            <div>
+              <h1 className="text-xl font-bold">Contact Us</h1>
+            </div>
+            <div>
+              <p>
+                <span className="text-xl font-bold">Address:</span>
+                <a
+                  href="https://www.google.com/maps"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Our address"
+                  title="Our address"
+                  className=""
+                >
+                  &nbsp; Desk ID:HD-428, <br /> WeWork Prestige Atlanta, 80 Feet
+                  Main Road, Koramangala, <br /> 1A Bloack Bangalore, KA -
+                  560034
+                </a>
+              </p>
+            </div>
+            <div>
+              <p>
+                <span className="ext-xl font-bold">Email:</span>
+                <a
+                  href="mailto:Support@Kaamhai.in"
+                  aria-label="Our email"
+                  title="Our email"
+                  className=""
+                >
+                  &nbsp; Support@Kaamhai.in
+                </a>
+              </p>
+            </div>
+            <div>
+              <p>
+                <span className="ext-xl font-bold">Phone:</span>
+                <a
+                  href="tel:+919656188888"
+                  aria-label="Our phone"
+                  title="Our phone"
+                  className=""
+                >
+                  +919656188888
+                </a>
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-col gap-10">
+            <h1 className="text-xl font-extrabold">Get the App</h1>
+            <Image  src={AppStore} alt=""></Image>
+            <Image src={PlayStore} alt=""></Image>
+          </div>
+        </div>
+        <div>
+          <p>© 2024 <span className=" font-bold">Kaamhai</span>. All rights reserved I Made with 💙</p>
+        </div>
+      </footer>
     </main>
   );
 }
