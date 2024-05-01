@@ -1,117 +1,119 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
+import NavPng from "@/public/nav.png";
+import ScanQR from "@/public/scan.png";
+import Group1 from "@/public/Group 1.png";
+import { FaSearch } from "react-icons/fa";
+import { IoIosStar } from "react-icons/io";
+import Marquee from "react-fast-marquee";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
-    >
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">pages/index.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="./vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className={`f bg-white ${inter.className}`}>
+      <header className=" body-font">
+        <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <Image src={NavPng} alt=""></Image>
+          <nav className="md:mr-auto md:ml-8 md:py-1 md:pl-4 	flex flex-wrap items-center text-base justify-center">
+            <a className="mr-7 text-gray-600 hover:text-gray-900">Home</a>
+            <a className="mr-7 text-gray-600 hover:text-gray-900">About</a>
+            <a className="mr-7 font-bold text-black hover:text-gray-900">
+              Let’s Talk Business!
+            </a>
+          </nav>
+          <button className="inline-flex items-center bg-[#FFD704] text-black py-1 px-3 border-2 font-bold border-black  focus:outline-none hover:bg-gray-200 text-base mt-4 md:mt-0">
+            Download the App
+          </button>
         </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700/10 after:dark:from-sky-900 after:dark:via-[#0141ff]/40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="./next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
+      </header>
+      {/* Hero Section */}
+      <div className=" bg-[linear-gradient(180deg,_#F4F4F4_0%,_#FFFFFF_100%)] hero min-h-screen flex flex-col gap-20 items-center justify-center">
+        {/* Hero Heading */}
+        <div className="flex flex-col gap-10">
+          <h2 className=" font-extrabold text-8xl leading-snug px-80 items-center justify-center text-center">
+            Bring your hiring journey with <span className="">Kaamhai</span>
           </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
+          <p className=" text-3xl px-[38rem] leading-snug items-center justify-center text-center">
+            Upgrade your hiring process with Kaamhai Designed with verified
+            databases
           </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Discover and deploy boilerplate example Next.js&nbsp;projects.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+          <div className=" flex items-center gap-3 justify-center">
+            <div className="flex border-2 border-black rounded-full">
+              <div className="flex px-1 py-1">
+                <input
+                  type="search"
+                  name="search"
+                  placeholder="Enter employee Unique ID here"
+                  className=" w-80 focus:outline-none ml-4 rounded-full"
+                />
+                <button
+                  type="submit"
+                  className=" content-center border-2 border-black bg-[#FFD704] rounded-full h-12 w-12"
+                >
+                  <FaSearch className="ml-2 h-7 w-7" />
+                </button>
+              </div>
+            </div>
+            <div>
+              <button className="flex items-center gap-3 border-2 border-black bg-[#FFD704] rounded-full px-5 py-2">
+                <Image src={ScanQR} alt="" />
+                <p className=" font-bold text-2xl">Scan QR</p>
+              </button>
+            </div>
+          </div>
+        </div>
+        {/* Scroll Section */}
+        <div className=" bg-[#FFD704] border flex border-black border-t-4 border-b-4 border-l-0 border-r-0 w-full h-20">
+          <Marquee>
+            <div className=" mr-10 font-bold text-5xl uppercase">
+              <h1>Empowerment</h1>
+            </div>
+            <div className=" mr-10">
+              <IoIosStar />
+            </div>
+            <div className=" mr-10 font-bold text-5xl uppercase">
+              <h1>Accessibility</h1>
+            </div>
+            <div className=" mr-10">
+              <IoIosStar />
+            </div>
+            <div className=" mr-10 font-bold text-5xl uppercase">
+              <h1>Efficiency</h1>
+            </div>
+            <div className=" mr-10">
+              <IoIosStar />
+            </div>
+            <div className=" mr-10 font-bold text-5xl uppercase">
+              <h1>Empowerment</h1>
+            </div>
+            <div className=" mr-10">
+              <IoIosStar />
+            </div>
+            <div className=" mr-10 font-bold text-5xl uppercase">
+              <h1>Accessibility</h1>
+            </div>
+            <div className=" mr-10">
+              <IoIosStar />
+            </div>
+            <div className=" mr-10 font-bold text-5xl uppercase">
+              <h1>Efficiency</h1>
+            </div>
+            <div className=" mr-10">
+              <IoIosStar />
+            </div>
+          </Marquee>
+        </div>
+        {/* Hero Description */}
+        <div className="flex flex-row items-center justify-center">
+          <div className="flex flex-col w-[47%] mt-10">
+            <h1 className="font-extrabold text-8xl leading-snug capitalize text-[#9E9E9E] text-wrap">We&#39;ll help you make <span className=" text-black">smarter</span> hiring decisions</h1>
+            <p className="text-3xl leading-snug items-center justify-center">To access the app, just open the link we&#39;ll send you <span className="italic bg-[#FFD704]">via SMS.</span></p>
+          </div>
+          <div className=" -ml-80">
+            <Image src={Group1} alt=""></Image>
+          </div>
+        </div>
       </div>
     </main>
   );
