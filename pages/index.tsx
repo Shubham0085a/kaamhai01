@@ -3,26 +3,38 @@ import { Inter } from "next/font/google";
 import NavPng from "@/public/nav.png";
 import ScanQR from "@/public/scan.png";
 import Group1 from "@/public/Group 1.png";
+import ScreenImage from "@/public/Screenshot.png";
+import JobPost from "@/public/Job Posts.png";
+import LeaveManagementSystem from "@/public/Leave Management System.png";
+import AdvancePayTracker from "@/public/Advance Pay Tracker.png";
+import PaymentTrackers from "@/public/Payment Trackers.png";
+import MonthlyPayslip from "@/public/Monthly Payslip.png";
+import Kochi from "@/public/Kochi.png";
+import EmployeeCard from "@/public/Employee card.png";
+import Bengaluru from "@/public/Bengaluru.png";
+import JobSeeker from "@/public/Job Seekers.png";
+import VerifiedEmployees from "@/public/Verified Employees.png";
 import { FaSearch } from "react-icons/fa";
 import { IoIosStar } from "react-icons/io";
 import Marquee from "react-fast-marquee";
+import Ripple from "@/components/ripple";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
     <main className={`f bg-white ${inter.className}`}>
-      <header className=" body-font">
+      <header className="body-font">
         <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
           <Image src={NavPng} alt=""></Image>
-          <nav className="md:mr-auto md:ml-8 md:py-1 md:pl-4 	flex flex-wrap items-center text-base justify-center">
+          <nav className="md:mr-auto md:ml-8 md:py-1 md:pl-4 flex flex-wrap items-center text-base justify-center">
             <a className="mr-7 text-gray-600 hover:text-gray-900">Home</a>
             <a className="mr-7 text-gray-600 hover:text-gray-900">About</a>
             <a className="mr-7 font-bold text-black hover:text-gray-900">
-              Let’s Talk Business!
+              Let&#39;s Talk Business!
             </a>
           </nav>
-          <button className="inline-flex items-center bg-[#FFD704] text-black py-1 px-3 border-2 font-bold border-black  focus:outline-none hover:bg-gray-200 text-base mt-4 md:mt-0">
+          <button className="inline-flex items-center bg-[#FFD704] text-black py-1 px-3 border-2 font-bold border-black focus:outline-none hover:bg-gray-200 text-base mt-4 md:mt-0">
             Download the App
           </button>
         </div>
@@ -107,13 +119,135 @@ export default function Home() {
         {/* Hero Description */}
         <div className="flex flex-row items-center justify-center">
           <div className="flex flex-col w-[47%] mt-10">
-            <h1 className="font-extrabold text-8xl leading-snug capitalize text-[#9E9E9E] text-wrap">We&#39;ll help you make <span className=" text-black">smarter</span> hiring decisions</h1>
-            <p className="text-3xl leading-snug items-center justify-center">To access the app, just open the link we&#39;ll send you <span className="italic bg-[#FFD704]">via SMS.</span></p>
+            <h1 className="font-extrabold text-8xl leading-snug capitalize text-[#9E9E9E] text-wrap">
+              We&#39;ll help you make{" "}
+              <span className=" text-black">smarter</span> hiring decisions
+            </h1>
+            <p className="text-3xl leading-snug items-center justify-center">
+              To access the app, just open the link we&#39;ll send you{" "}
+              <span className="italic bg-[#FFD704]">via SMS.</span>
+            </p>
           </div>
           <div className=" -ml-80">
             <Image src={Group1} alt=""></Image>
           </div>
         </div>
+      </div>
+      {/* About Us */}
+      <div className=" bg-bgimage flex pt-10">
+        <div className="flex flex-col font-bold mt-40 ml-16 text-4xl items-center justify-center">
+          <h1>About Us</h1>
+          <Image src={ScreenImage} alt=""></Image>
+        </div>
+        <div className="flex flex-col items-center justify-center w-[70%] pl-10 pr-40 gap-16">
+          <div className=" border-b-2 border-black text-4xl pb-16">
+            <p>
+              Kaamhai is a revolutionary platform designed to connect blue
+              collar employees with job opportunities and streamline HR
+              management for employers. Our mission is to empower individuals
+              and businesses in the blue collar sector by providing innovative
+              solutions tailored to their needs
+            </p>
+          </div>
+          <div className=" border-b-2 border-black text-4xl pb-16 gap-80 flex flex-row">
+            <div className="flex flex-col items-start text-wrap gap-10">
+              <div>
+                <Image src={VerifiedEmployees} alt=""></Image>
+              </div>
+              <div className=" font-bold">1000+</div>
+              <div>
+                Verified <br /> Employees
+              </div>
+            </div>
+            <div className="flex flex-col items-start justify-between text-wrap gap-10">
+              <div>
+                <Image src={JobPost} alt=""></Image>
+              </div>
+              <div className=" font-bold">2500+</div>
+              <div>
+                Job <br /> Post
+              </div>
+            </div>
+            <div className="flex flex-col items-start justify-between text-wrap gap-10">
+              <div>
+                <Image src={JobSeeker} alt=""></Image>
+              </div>
+              <div className=" font-bold">500+</div>
+              <div>
+                Job <br /> Seeker
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Business Operations */}
+      <div className="bg-[linear-gradient(180deg,_#F4F4F4_0%,_#FFFFFF_100%)]">
+        <div className="flex flex-col items-center justify-center">
+          <h1 className=" text-5xl font-bold text-center py-16 leading-normal">
+            Simplify Your Business Operations <br /> with Ease!
+          </h1>
+          <div className="flex text-3xl font-bold px-10 pb-16 w-[75%] gap-10 items-center justify-center">
+            <div className=" flex flex-col items-center gap-14">
+              <Image src={LeaveManagementSystem} alt=""></Image>
+              <h1 className=" text-center">Leave Management System</h1>
+            </div>
+            <div className=" flex flex-col-reverse -mb-32 items-center gap-14">
+              <Image src={AdvancePayTracker} alt=""></Image>
+              <h1 className=" text-center">Advance Pay Tracker</h1>
+            </div>
+            <div className=" flex flex-col items-center gap-14">
+              <Image src={PaymentTrackers} alt=""></Image>
+              <h1 className=" text-center">PaymentTrackers</h1>
+            </div>
+            <div className=" flex flex-col-reverse -mb-32 items-center gap-14">
+              <Image src={MonthlyPayslip} alt=""></Image>
+              <h1 className=" text-center">MonthlyPayslip</h1>
+            </div>
+          </div>
+        </div>
+        <div className="flex py-16 px-48 justify-around items-center">
+          <h1 className=" text-5xl font-bold uppercase">
+            Find{" "}
+            <span className="bg-[#FFD704] leading-normal">
+              Verified <br /> Employees
+            </span>{" "}
+            in your City
+          </h1>
+          <div className="flex text-3xl font-bold text-center">
+            <div>
+              <Image src={Kochi} alt=""></Image>
+              <h1>Kochi</h1>
+            </div>
+            <div>
+              <Image src={Bengaluru} alt=""></Image>
+              <h1>Bengaluru</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-lg border bg-black p-20 md:shadow-xl">
+        <div>
+          <p className="z-10 whitespace-pre-wrap text-center text-5xl font-medium tracking-tighter text-white">
+            Get Your Employee card now !
+          </p>
+          <div className="text-[#FFD704] text-3xl font-semibold flex items-center justify-between gap-20 mt-20">
+            <div className="flex flex-col items-start gap-48">
+              <h1>Profile Verification</h1>
+              <h1>Face Verification</h1>
+              <h1>Passport Verification</h1>
+            </div>
+            <div className="flex flex-col items-center">
+              <h1>Bank Account Verification</h1>
+              <Image src={EmployeeCard} alt="" className=" mt-20"></Image>
+            </div>
+            <div className="flex flex-col items-start gap-48">
+              <h1>Personal Verification</h1>
+              <h1>Aadhar card Verification</h1>
+              <h1>Voter ID Verification</h1>
+            </div>
+          </div>
+        </div>
+        <Ripple />
       </div>
     </main>
   );
