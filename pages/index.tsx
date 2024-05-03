@@ -50,7 +50,7 @@ export default function Home() {
           <h2 className=" font-extrabold sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl leading-snug sm:px-40 md:px-52 lg:px-60 xl:px-72 2xl:px-80 items-center justify-center text-center">
             Bring your hiring journey with <span className="bg-vector1 bg-no-repeat bg-contain bg-center">Kaamhai</span>
           </h2>
-          <p className=" text-3xl sm:px-[10rem] md:px-[15rem] lg:px-[28rem] xl:px-[32rem] 2xl:px-[38rem] leading-snug items-center justify-center text-center">
+          <p className=" text-3xl sm:px-[5rem] md:px-[12rem] lg:px-[20rem] xl:px-[28rem] 2xl:px-[38rem] leading-snug items-center justify-center text-center">
             Upgrade your hiring process with Kaamhai Designed with verified
             databases
           </p>
@@ -138,7 +138,7 @@ export default function Home() {
         </div>
       </div>
       {/* About Us */}
-      <div className=" bg-bgimage flex flex-col xl:flex-row pt-10">
+      <div className=" bg-bgimage flex flex-col xl:flex-row xl:pt-10">
         <div className="flex flex-col font-bold mt-40 ml-16 text-4xl items-center justify-end">
           <h1>About Us</h1>
           <Image src={ScreenImage} alt=""></Image>
