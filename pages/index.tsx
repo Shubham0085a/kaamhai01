@@ -47,10 +47,10 @@ export default function Home() {
       <div className=" bg-[linear-gradient(180deg,_#F4F4F4_0%,_#FFFFFF_100%)] hero min-h-screen flex flex-col gap-20 items-center justify-center">
         {/* Hero Heading */}
         <div className="flex flex-col gap-10">
-          <h2 className=" font-extrabold text-8xl leading-snug px-80 items-center justify-center text-center">
-            Bring your hiring journey with <span className="">Kaamhai</span>
+          <h2 className=" font-extrabold sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl leading-snug sm:px-40 md:px-52 lg:px-60 xl:px-72 2xl:px-80 items-center justify-center text-center">
+            Bring your hiring journey with <span className="bg-vector1 bg-no-repeat bg-contain bg-center">Kaamhai</span>
           </h2>
-          <p className=" text-3xl px-[38rem] leading-snug items-center justify-center text-center">
+          <p className=" text-3xl sm:px-[10rem] md:px-[15rem] lg:px-[28rem] xl:px-[32rem] 2xl:px-[38rem] leading-snug items-center justify-center text-center">
             Upgrade your hiring process with Kaamhai Designed with verified
             databases
           </p>
@@ -121,30 +121,30 @@ export default function Home() {
           </Marquee>
         </div>
         {/* Hero Description */}
-        <div className="flex flex-row items-center justify-center">
-          <div className="flex flex-col w-[47%] mt-10">
-            <h1 className="font-extrabold text-8xl leading-snug capitalize text-[#9E9E9E] text-wrap">
+        <div className="flex flex-row items-center px-10 justify-center">
+          <div className="flex flex-col w-[80%] md:w-[70%] lg:w-[60%] xl:w-[47%] 2xl:w-[47%] xl:mt-10">
+            <h1 className="font-extrabold text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-8xl leading-snug capitalize text-[#9E9E9E] text-wrap">
               We&#39;ll help you make{" "}
-              <span className=" text-black">smarter</span> hiring decisions
+              <span className=" text-black bg-vector1 bg-no-repeat bg-contain bg-center">smarter</span> hiring decisions
             </h1>
             <p className="text-3xl leading-snug items-center justify-center">
               To access the app, just open the link we&#39;ll send you{" "}
               <span className="italic bg-[#FFD704]">via SMS.</span>
             </p>
           </div>
-          <div className=" -ml-80">
+          <div className="xl:ml-[-10rem] xl:mb-32 2xl:ml-[-12rem] 2xl:mb-36">
             <Image src={Group1} alt=""></Image>
           </div>
         </div>
       </div>
       {/* About Us */}
-      <div className=" bg-bgimage flex pt-10">
-        <div className="flex flex-col font-bold mt-40 ml-16 text-4xl items-center justify-center">
+      <div className=" bg-bgimage flex flex-col xl:flex-row pt-10">
+        <div className="flex flex-col font-bold mt-40 ml-16 text-4xl items-center justify-end">
           <h1>About Us</h1>
           <Image src={ScreenImage} alt=""></Image>
         </div>
-        <div className="flex flex-col items-center justify-center w-[70%] pl-10 pr-40 gap-16">
-          <div className=" border-b-2 border-black text-4xl pb-16">
+        <div className="flex flex-col items-center justify-center sm:px-20 md:px-28 lg:px-40 sm:pt-10 xl:w-[70%] pb-16 xl:pl-10 xl:pr-36 2xl:pr-40 gap-16">
+          <div className=" border-b-2 border-black text-wrap text-center xl:text-left sm:text-2xl md:text-3xl lg:text-4xl pb-12">
             <p>
               Kaamhai is a revolutionary platform designed to connect blue
               collar employees with job opportunities and streamline HR
@@ -153,7 +153,7 @@ export default function Home() {
               solutions tailored to their needs
             </p>
           </div>
-          <div className=" border-b-2 border-black text-4xl pb-16 gap-80 flex flex-row">
+          <div className=" border-b-2 border-black text-4xl pb-12 items-center sm:gap-20 md:gap-24 lg:gap-32 xl:gap-44 2xl:gap-64 flex flex-row">
             <div className="flex flex-col items-start text-wrap gap-10">
               <div>
                 <Image src={VerifiedEmployees} alt=""></Image>
@@ -186,31 +186,35 @@ export default function Home() {
       </div>
       {/* Business Operations */}
       <div className="bg-[linear-gradient(180deg,_#F4F4F4_0%,_#FFFFFF_100%)]">
-        <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-col flex-wrap items-center justify-center">
           <h1 className=" text-5xl font-bold text-center py-16 leading-normal">
             Simplify Your Business Operations <br /> with Ease!
           </h1>
-          <div className="flex text-3xl font-bold px-10 pb-16 w-[75%] gap-10 items-center justify-center">
+          <div className="flex lg:flex-row flex-col  text-3xl font-bold px-10 pb-16 w-[75%] gap-10 items-center justify-center">
+            <div className="flex flex-row items-center lg:border-none border-b-2 lg:pb-0 pb-20 border-gray-600">
             <div className=" flex flex-col items-center gap-14">
               <Image src={LeaveManagementSystem} alt=""></Image>
-              <h1 className=" text-center">Leave Management System</h1>
+              <h1 className=" text-center">Leave Management<br/> System</h1>
             </div>
             <div className=" flex flex-col-reverse -mb-32 items-center gap-14">
               <Image src={AdvancePayTracker} alt=""></Image>
-              <h1 className=" text-center">Advance Pay Tracker</h1>
+              <h1 className=" text-center">Advance Pay<br/> Tracker</h1>
             </div>
+            </div>
+            <div className="flex flex-row items-center">
             <div className=" flex flex-col items-center gap-14">
               <Image src={PaymentTrackers} alt=""></Image>
-              <h1 className=" text-center">PaymentTrackers</h1>
+              <h1 className=" text-center">Payment<br/> Trackers</h1>
             </div>
             <div className=" flex flex-col-reverse -mb-32 items-center gap-14">
               <Image src={MonthlyPayslip} alt=""></Image>
-              <h1 className=" text-center">MonthlyPayslip</h1>
+              <h1 className=" text-center">Monthly<br/> Payslip</h1>
+            </div>
             </div>
           </div>
         </div>
-        <div className="flex py-16 px-48 justify-around items-center">
-          <h1 className=" text-5xl font-bold uppercase">
+        <div className="flex lg:flex-row flex-col py-16 px-48 justify-around items-center">
+          <h1 className="sm:text-5xl lg:text-4xl xl:text-5xl font-bold uppercase">
             Find{" "}
             <span className="bg-[#FFD704] leading-normal">
               Verified <br /> Employees
@@ -255,7 +259,7 @@ export default function Home() {
         <Ripple />
       </div>
       {/* Contact Us */}
-      <div className="bg-white flex items-center gap-16 py-16 justify-center">
+      <div className="bg-white flex lg:flex-row flex-col lg:gap-0 gap-10 items-center lg:px-10 xl:px-0 xl:gap-16 py-16 justify-center">
         <div>
           <Image src={cuate} alt=""></Image>
         </div>
@@ -272,7 +276,7 @@ export default function Home() {
       </div>
       {/* Footer */}
       <footer className="bg-[#F2F1EE] flex flex-col items-center py-10 gap-4">
-        <div className="flex justify-between gap-[40rem]">
+        <div className="flex justify-between gap-[2rem] md:gap-[10rem] lg:gap-[25rem] xl:gap-[40rem]">
           <div className="flex flex-col">
             <div>
               <Image src={Logo} alt=""></Image>
@@ -325,7 +329,7 @@ export default function Home() {
                   title="Our phone"
                   className=""
                 >
-                  +919656188888
+                  &nbsp;+919656188888
                 </a>
               </p>
             </div>

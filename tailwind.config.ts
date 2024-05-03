@@ -27,6 +27,7 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         "bgimage":"url('../public/background.png')",
+        "vector1":"url('../public/Vector1.png')",
       },
     },
   },
