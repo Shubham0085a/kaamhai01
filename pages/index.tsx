@@ -32,7 +32,7 @@ import { TextGenerateEffect } from "@/components/text-generate-effect";
 import { Highlight } from "@/components/highlight";
 import { TypewriterEffect } from "@/components/typewriter-effect";
 import { CardBody, CardContainer, CardItem } from "../components/3d-card";
-import CountUp from "react-CountUp";
+import CountUp from 'react-countup';
 import ScrollTrigger from "react-scroll-trigger";
 import { useState } from "react";
 
