@@ -27,10 +27,14 @@ import Marquee from "react-fast-marquee";
 import Ripple from "@/components/ripple";
 import CityRipple from "@/components/cityripple";
 import Link from "next/link";
+import Bee from "@/public/Bee.png"
 import { TextGenerateEffect } from "@/components/text-generate-effect";
 import { Highlight } from "@/components/highlight";
 import { TypewriterEffect } from "@/components/typewriter-effect";
 import { CardBody, CardContainer, CardItem } from "../components/3d-card";
+import CountUp from "react-CountUp";
+import ScrollTrigger from "react-scroll-trigger";
+import { useState } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 const words = `Kaamhai is a revolutionary platform designed to connect blue
@@ -41,6 +45,7 @@ solutions tailored to their needs
 `;
 
 export default function Home() {
+  const [counterOn, setcounterOn] = useState(false);
   const empolyers = [
     {
       text: "Simplify",
@@ -75,7 +80,7 @@ export default function Home() {
   ];
   return (
     <main className={`f bg-white ${inter.className}`}>
-      <header className="body-font sticky top-0 bg-white z-[999]">
+      <header className="body-font sticky top-0 bg-white z-[9999]">
         <div className="container mx-auto flex flex-wrap px-5 flex-col md:flex-row items-center">
           <Link href="/">
             <Image
@@ -88,25 +93,36 @@ export default function Home() {
             <Link href="/" className="mr-7 text-gray-600 hover:text-gray-900">
               Home
             </Link>
-            <Link href="/" className="mr-7 text-gray-600 hover:text-gray-900">
+            <Link
+              href="#about"
+              className="mr-7 text-gray-600 hover:text-gray-900"
+            >
               About
             </Link>
             <Link
-              href=""
+              href="#contact"
               className="mr-7 font-bold text-black hover:text-gray-900"
             >
               Let&#39;s Talk Business!
             </Link>
           </nav>
           <div className=" flex gap-6">
-            <Link href="">
+            <Link
+              href="https://www.apple.com/app-store/"
+              rel="external nofollow noopener"
+              target="_blank"
+            >
               <Image
                 src={AppStore}
                 alt=""
                 className=" h-[2.90rem] w-40"
               ></Image>
             </Link>
-            <Link href="">
+            <Link
+              href="https://play.google.com/store/apps?hl=en_US&gl=US"
+              rel="external nofollow noopener"
+              target="_blank"
+            >
               <Image src={PlayStore} alt="" className=""></Image>
             </Link>
           </div>
@@ -118,7 +134,7 @@ export default function Home() {
         <div className="flex flex-col gap-10">
           <h2 className=" font-extrabold text-4xl  sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl leading-snug items-center justify-center text-center">
             Bring your hiring journey <br /> with{" "}
-            <span className="bg-vector1 bg-no-repeat bg-contain bg-center">
+            <span className="bg-vector1 relative bg-no-repeat bg-contain bg-center">
               Kaamhai
             </span>
           </h2>
@@ -143,12 +159,12 @@ export default function Home() {
                 </button>
               </div>
             </div>
-            <div>
+            {/* <div>
               <button className="flex items-center gap-3 border-2 border-black bg-[#FFD704] rounded-full px-5 py-2">
                 <Image src={ScanQR} alt="" />
                 <p className=" font-bold text-2xl">Scan QR</p>
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
         {/* Scroll Section */}
@@ -203,13 +219,13 @@ export default function Home() {
                 {/* Simplify Your Business Operations <br /> with Ease! */}
                 <TypewriterEffect words={empolyers} />
               </h1>
-              <div className="flex lg:flex-row flex-col  text-3xl font-bold px-10   gap-3 items-center justify-center">
+              <div className="flex lg:flex-row flex-col  text-3xl font-semibold px-10  items-center justify-center">
                 <div className="flex flex-row items-center lg:border-none border-b-2 lg:pb-0 pb-20 border-gray-600">
                   <CardContainer className="inter-var">
                     <CardBody className="bg-gray-50 relative group/card flex items-center justify-center flex-col dark:bg-[linear-gradient(180deg,_#F4F4F4_0%,_#FFFFFF_100%)] dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[17rem] rounded-xl  border  ">
                       <CardItem
                         translateZ="50"
-                        className="text-xl font-bold text-neutral-600 dark:text-white h-[10rem] w-[9rem]"
+                        className="text-neutral-600 dark:text-white h-[10rem] w-[9rem]"
                       >
                         <Image
                           className=" dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] object-none object-center rounded-full group-hover/card:shadow-xl"
@@ -300,7 +316,7 @@ export default function Home() {
                 {/* Caption for Employees */}
                 <TypewriterEffect words={employee} />
               </h1>
-              <div className="flex lg:flex-row flex-col  text-3xl font-bold px-10  gap-10 items-center justify-center">
+              <div className="flex lg:flex-row flex-col  text-3xl font-semibold px-10  items-center justify-center">
                 <div className="flex flex-row items-center lg:border-none border-b-2 lg:pb-0 border-gray-600">
                   <CardContainer className="inter-var">
                     <CardBody className="bg-gray-50 relative group/card flex items-center justify-center flex-col dark:bg-[linear-gradient(180deg,_#F4F4F4_0%,_#FFFFFF_100%)] dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[17rem] rounded-xl  border  ">
@@ -392,7 +408,7 @@ export default function Home() {
       </div>
       {/* Employee card */}
       <div className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-lg border bg-black p-20 md:shadow-xl">
-        <div>
+        <div className=" z-10">
           <p className="z-10 whitespace-pre-wrap text-center text-5xl font-medium tracking-tighter text-white">
             Get Your Employee card now !
           </p>
@@ -445,7 +461,7 @@ export default function Home() {
               </Highlight>{" "}
               in your City
             </h1>
-            <div className="flex text-3xl gap-20 font-bold text-center">
+            <div className="flex text-3xl gap-28 font-bold text-center">
               <div className="flex flex-col gap-10">
                 <div className=" relative h-52 w-52">
                   <Image src={Kochi} alt="" className=" absolute z-10"></Image>
@@ -469,24 +485,26 @@ export default function Home() {
         </div>
       </div>
       {/* About Us */}
-      <div id="about" className="bg-cover bg-bgimage">
-        <svg
+      <ScrollTrigger onEnter={()=> setcounterOn(true)} onExit={()=> setcounterOn(false)}>
+      <div id="about" className="bg-cover bg-[#FFD704]">
+        
+        <div className=" flex flex-col xl:flex-row">
+          <div className="flex relative flex-col font-bold mt-40 ml-16 text-4xl items-center justify-end">
+            <h1 className=" z-[999]">About Us</h1>
+            <Image src={ScreenImage} alt="" className=" z-[999]"></Image>
+            <svg
           xmlns="http://www.w3.org/2000/svg"
           width="250"
           height="275"
           viewBox="0 0 250 275"
           fill="none"
-          className=" absolute mt-72 ml-12"
+          className=" absolute top-10 -left-5"
         >
           <path
             d="M249.7 209.892C235.591 233.012 215.042 251.368 190.652 262.638C166.262 273.907 139.126 277.585 112.677 273.205C86.2274 268.825 61.6518 256.585 42.0578 238.031C22.4637 219.478 8.73139 195.446 2.59725 168.973C-3.53689 142.5 -1.79731 114.775 7.59599 89.3056C16.9893 63.8359 33.6145 41.7647 55.3691 25.8831C77.1237 10.0015 103.031 1.0227 129.814 0.0822443C156.597 -0.858214 183.054 6.28186 205.839 20.5996L134.5 137.5L249.7 209.892Z"
             fill="white"
           />
         </svg>
-        <div className=" flex flex-col xl:flex-row xl:pt-10">
-          <div className="flex flex-col font-bold mt-40 ml-16 text-4xl items-center justify-end">
-            <h1>About Us</h1>
-            <Image src={ScreenImage} alt="" className=" z-[999]"></Image>
           </div>
           <div className="flex flex-col items-center justify-center sm:px-20 md:px-28 lg:px-40 sm:pt-10 xl:w-[70%] pb-16 xl:pl-10 xl:pr-36 2xl:pr-40 gap-16">
             <div className=" border-b-2 border-black text-wrap text-center xl:text-left sm:text-2xl md:text-3xl lg:text-4xl pb-12">
@@ -497,14 +515,17 @@ export default function Home() {
               and businesses in the blue collar sector by providing innovative
               solutions tailored to their needs
             </p> */}
-              <TextGenerateEffect words={words} />
+              {counterOn && <TextGenerateEffect words={words} />}
             </div>
             <div className=" border-b-2 border-black text-4xl pb-12 items-center sm:gap-20 md:gap-24 lg:gap-32 xl:gap-44 2xl:gap-64 flex flex-row">
               <div className="flex flex-col items-start text-wrap gap-10">
                 <div>
                   <Image src={VerifiedEmployees} alt=""></Image>
                 </div>
-                <div className=" font-bold">1000+</div>
+                <div className=" font-bold">
+                  {counterOn && <CountUp start={728} end={1000} duration={3} delay={0} />}
+                  +
+                </div>
                 <div>
                   Verified <br /> Employees
                 </div>
@@ -513,7 +534,9 @@ export default function Home() {
                 <div>
                   <Image src={JobPost} alt=""></Image>
                 </div>
-                <div className=" font-bold">2500+</div>
+                <div className=" font-bold">
+                  {counterOn &&<CountUp start={2000} end={2500} duration={4} delay={0} />}+
+                </div>
                 <div>
                   Job <br /> Post
                 </div>
@@ -522,7 +545,9 @@ export default function Home() {
                 <div>
                   <Image src={JobSeeker} alt=""></Image>
                 </div>
-                <div className=" font-bold">500+</div>
+                <div className=" font-bold">
+                  {counterOn && <CountUp start={126} end={500} duration={3} delay={0} />}+
+                </div>
                 <div>
                   Job <br /> Seeker
                 </div>
@@ -531,9 +556,13 @@ export default function Home() {
           </div>
         </div>
       </div>
+      </ScrollTrigger>
       {/* Contact Us */}
-      <div className="bg-white flex lg:flex-row flex-col lg:gap-0 gap-10 items-center lg:px-10 xl:px-0 xl:gap-16 py-16 justify-center">
-        <div>
+      <div
+        id="contact"
+        className="bg-white flex lg:flex-row flex-col  py-16 px-40 justify-between"
+      >
+        <div className=" pl-10">
           <Image src={cuate} alt=""></Image>
         </div>
         <div className="flex flex-col items-end justify-end capitalize gap-6">
@@ -549,189 +578,32 @@ export default function Home() {
             <Link href="/">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                x="0px"
-                y="0px"
-                width="48"
                 height="48"
-                viewBox="0 0 48 48"
+                width="48"
+                viewBox="0 0 448 512"
               >
-                <path
-                  fill="#fff"
-                  d="M4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98c-0.001,0,0,0,0,0h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303z"
-                ></path>
-                <path
-                  fill="#fff"
-                  d="M4.868,43.803c-0.132,0-0.26-0.052-0.355-0.148c-0.125-0.127-0.174-0.312-0.127-0.483l2.639-9.636c-1.636-2.906-2.499-6.206-2.497-9.556C4.532,13.238,13.273,4.5,24.014,4.5c5.21,0.002,10.105,2.031,13.784,5.713c3.679,3.683,5.704,8.577,5.702,13.781c-0.004,10.741-8.746,19.48-19.486,19.48c-3.189-0.001-6.344-0.788-9.144-2.277l-9.875,2.589C4.953,43.798,4.911,43.803,4.868,43.803z"
-                ></path>
-                <path
-                  fill="#cfd8dc"
-                  d="M24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,4C24.014,4,24.014,4,24.014,4C12.998,4,4.032,12.962,4.027,23.979c-0.001,3.367,0.849,6.685,2.461,9.622l-2.585,9.439c-0.094,0.345,0.002,0.713,0.254,0.967c0.19,0.192,0.447,0.297,0.711,0.297c0.085,0,0.17-0.011,0.254-0.033l9.687-2.54c2.828,1.468,5.998,2.243,9.197,2.244c11.024,0,19.99-8.963,19.995-19.98c0.002-5.339-2.075-10.359-5.848-14.135C34.378,6.083,29.357,4.002,24.014,4L24.014,4z"
-                ></path>
-                <path
-                  fill="#40c351"
-                  d="M35.176,12.832c-2.98-2.982-6.941-4.625-11.157-4.626c-8.704,0-15.783,7.076-15.787,15.774c-0.001,2.981,0.833,5.883,2.413,8.396l0.376,0.597l-1.595,5.821l5.973-1.566l0.577,0.342c2.422,1.438,5.2,2.198,8.032,2.199h0.006c8.698,0,15.777-7.077,15.78-15.776C39.795,19.778,38.156,15.814,35.176,12.832z"
-                ></path>
-                <path
-                  fill="#fff"
-                  fill-rule="evenodd"
-                  d="M19.268,16.045c-0.355-0.79-0.729-0.806-1.068-0.82c-0.277-0.012-0.593-0.011-0.909-0.011c-0.316,0-0.83,0.119-1.265,0.594c-0.435,0.475-1.661,1.622-1.661,3.956c0,2.334,1.7,4.59,1.937,4.906c0.237,0.316,3.282,5.259,8.104,7.161c4.007,1.58,4.823,1.266,5.693,1.187c0.87-0.079,2.807-1.147,3.202-2.255c0.395-1.108,0.395-2.057,0.277-2.255c-0.119-0.198-0.435-0.316-0.909-0.554s-2.807-1.385-3.242-1.543c-0.435-0.158-0.751-0.237-1.068,0.238c-0.316,0.474-1.225,1.543-1.502,1.859c-0.277,0.317-0.554,0.357-1.028,0.119c-0.474-0.238-2.002-0.738-3.815-2.354c-1.41-1.257-2.362-2.81-2.639-3.285c-0.277-0.474-0.03-0.731,0.208-0.968c0.213-0.213,0.474-0.554,0.712-0.831c0.237-0.277,0.316-0.475,0.474-0.791c0.158-0.317,0.079-0.594-0.04-0.831C20.612,19.329,19.69,16.983,19.268,16.045z"
-                  clip-rule="evenodd"
-                ></path>
+                <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
               </svg>
             </Link>
             <Link href="/">
               {" "}
               <svg
-                id="_1-Email"
-                data-name="1-Email"
                 xmlns="http://www.w3.org/2000/svg"
-                width="48"
                 height="48"
-                viewBox="0 0 48 48"
+                width="48"
+                viewBox="0 0 512 512"
               >
-                <defs>
-                  <style>
-                    {`.cls-1{fill:#f6b445}.cls-2{fill:#fed049}.cls-3{fill:none;stroke:#474c54;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px}`}
-                  </style>
-                </defs>
-                <g id="_Group_" data-name="&lt;Group&gt;">
-                  <path
-                    className="cls-1"
-                    d="M47 9v28a4.025 4.025 0 0 1-1.17 2.83L28 22l-.28-.43z"
-                  />
-                  <path
-                    className="cls-2"
-                    d="M45.83 39.83A4.025 4.025 0 0 1 43 41H5a4.025 4.025 0 0 1-2.83-1.17L20 22l.25-.39L24 24l3.72-2.43.28.43z"
-                  />
-                  <path
-                    className="cls-1"
-                    d="M20.25 21.61 20 22 2.17 39.83A4.025 4.025 0 0 1 1 37V11a3.944 3.944 0 0 1 .18-1.19L2 10z"
-                  />
-                  <path
-                    className="cls-2"
-                    d="M47 9 27.72 21.57 24 24l-3.75-2.39L2 10l-.82-.19A4 4 0 0 1 5 7h37c4 0 5 2 5 2z"
-                  />
-                  <path
-                    className="cls-3"
-                    d="M42 7H5a4 4 0 0 0-3.82 2.81A3.944 3.944 0 0 0 1 11v26a3.995 3.995 0 0 0 4 4h38a3.995 3.995 0 0 0 4-4V9L27.72 21.57 24 24l-3.75-2.39L2 10"
-                  />
-                </g>
-                <path className="cls-3" d="M39 33 28 22M9 33l11-11" />
+                <path d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z" />
               </svg>
             </Link>
             <Link href="/">
               <svg
-                id="Layer_1"
-                // style={{ enableBackground: 'new 0 0 100 100' }}
-                width="48"
-                height="48"
-                version="1.1"
-                viewBox="0 0 100 100"
-                xmlSpace="preserve"
                 xmlns="http://www.w3.org/2000/svg"
-                xmlnsXlink="http://www.w3.org/1999/xlink"
+                height="48"
+                width="48"
+                viewBox="0 0 512 512"
               >
-                <style type="text/css">
-                  {`.st0{fill:url(#Background_13_);}
-          .st1{fill:url(#path-2_7_);}
-          .st2{filter:url(#Adobe_OpacityMaskFilter);}
-          .st3{fill:#FFFFFF;}
-          .st4{mask:url(#mask-3_1_);fill:#FFFFFF;}
-          .st5{fill:url(#SVGID_1_);}
-          .st6{fill:#1E1E1F;}
-          .st7{fill:url(#Oval_6_);}
-          .st8{stroke:#000000;stroke-width:0.3;}
-          .st9{fill:#2B2A2A;}
-          .st10{fill:#FF9500;}
-          .st11{fill:url(#Background_14_);}
-          .st12{fill:url(#path-2_8_);}
-          .st13{filter:url(#Adobe_OpacityMaskFilter_1_);}
-          .st14{mask:url(#mask-3_2_);}
-          .st15{fill:#FFFFFF;fill-opacity:0.7;}
-          .st16{fill:url(#Background_15_);}
-          .st17{fill:url(#Background_16_);}
-          .st18{fill:url(#Background_17_);}
-          .st19{filter:url(#Adobe_OpacityMaskFilter_2_);}
-          .st20{mask:url(#mask-2_6_);fill-opacity:0.29;}
-          .st21{filter:url(#Adobe_OpacityMaskFilter_3_);}
-          .st22{mask:url(#mask-2_5_);}
-          .st23{fill:url(#path-4_2_);}
-          .st24{filter:url(#Adobe_OpacityMaskFilter_4_);}
-          .st25{mask:url(#mask-2_4_);}
-          .st26{fill:#AAAAAA;}
-          .st27{fill:url(#Background_18_);}
-          .st28{fill:#141416;}
-          .st29{filter:url(#Adobe_OpacityMaskFilter_5_);}
-          .st30{mask:url(#mask-2_3_);fill:url(#Chart_1_);stroke:#FFFFFF;stroke-width:0.75;}
-          .st31{filter:url(#Adobe_OpacityMaskFilter_6_);}
-          .st32{mask:url(#mask-2_2_);}
-          .st33{fill:#01A6F1;}
-          .st34{filter:url(#Adobe_OpacityMaskFilter_7_);}
-          .st35{mask:url(#mask-2_1_);fill:#777778;}
-          .st36{fill:url(#Background_19_);}
-          .st37{fill:#2E2E30;}
-          .st38{fill:#7F7F7F;}
-          .st39{fill:#777777;}
-          .st40{fill:none;}
-          .st41{fill:url(#SVGID_2_);}
-          .st42{fill:url(#Oval_7_);}
-          .st43{filter:url(#Adobe_OpacityMaskFilter_8_);}
-          .st44{mask:url(#mask-3_3_);fill:#FF1414;}
-          .st45{filter:url(#Adobe_OpacityMaskFilter_9_);}
-          .st46{mask:url(#mask-2_8_);}
-          .st47{fill:#1BADF8;}
-          .st48{fill:#63DA38;}
-          .st49{filter:url(#Adobe_OpacityMaskFilter_10_);}
-          .st50{mask:url(#mask-2_7_);}
-          .st51{fill:#B7B7B7;}
-          .st52{filter:url(#Adobe_OpacityMaskFilter_11_);}
-          .st53{mask:url(#mask-2_24_);fill:url(#Red_1_);}
-          .st54{filter:url(#Adobe_OpacityMaskFilter_12_);}
-          .st55{mask:url(#mask-2_23_);fill:url(#Orange_1_);}
-          .st56{filter:url(#Adobe_OpacityMaskFilter_13_);}
-          .st57{mask:url(#mask-2_22_);fill:url(#Yellow_1_);}
-          .st58{filter:url(#Adobe_OpacityMaskFilter_14_);}
-          .st59{mask:url(#mask-2_21_);fill:url(#Green_1_);}
-          .st60{filter:url(#Adobe_OpacityMaskFilter_15_);}
-          .st61{mask:url(#mask-2_20_);fill:url(#Turquoise_1_);}
-          .st62{filter:url(#Adobe_OpacityMaskFilter_16_);}
-          .st63{mask:url(#mask-2_19_);fill:url(#Blue_1_);}
-          .st64{filter:url(#Adobe_OpacityMaskFilter_17_);}
-          .st65{mask:url(#mask-2_18_);fill:url(#Purple_1_);}
-          .st66{filter:url(#Adobe_OpacityMaskFilter_18_);}
-          .st67{mask:url(#mask-2_17_);fill:url(#Pink_1_);}
-          .st68{fill:url(#Background_20_);}
-          .st69{fill:#353535;}
-          .st70{fill:url(#SVGID_3_);}
-        `}
-                </style>
-                <g id="Symbols_11_">
-                  <g id="Graphics-_x2F_-App-Icons-_x2F_-Phone">
-                    <g id="Phone-Icon">
-                      <linearGradient
-                        gradientTransform="matrix(60 0 0 -60 -17169 37581)"
-                        gradientUnits="userSpaceOnUse"
-                        id="Background_13_"
-                        x1="286.9837"
-                        x2="286.9837"
-                        y1="626.266"
-                        y2="624.7667"
-                      >
-                        <stop offset="0" style={{ stopColor: "#67FF81" }} />
-                        <stop offset="1" style={{ stopColor: "#01B41F" }} />
-                      </linearGradient>
-                      <path
-                        className="st0"
-                        d="M63.6,5c9,0,13.5,0,18.4,1.5c5.3,1.9,9.5,6.1,11.4,11.4C95,22.9,95,27.4,95,36.4v27.2     c0,9,0,13.5-1.5,18.4c-1.9,5.3-6.1,9.5-11.4,11.4C77.2,95,72.7,95,63.6,95H36.4c-9,0-13.5,0-18.4-1.5C12.7,91.5,8.5,87.4,6.6,82     C5,77.2,5,72.7,5,63.6V36.4c0-9,0-13.5,1.5-18.4C8.5,12.7,12.7,8.5,18,6.6C22.9,5,27.4,5,36.4,5H63.6z"
-                        id="Background_11_"
-                      />
-                      <path
-                        className="st3"
-                        d="M25.7,44.3c-3.3-6-4.6-10.9-4.6-14.2s0.8-4.2,1.6-5c0.8-0.8,4.5-3,5.2-3.5c0.6-0.4,3-1.3,4.5,0.9     s4.3,6.5,6.3,9.4c3.1,4.1,0.6,5.9-0.2,7c-1.5,2-2.3,2.5-2.3,4.9c0,2.4,6.8,9.4,8.4,11.1c1.6,1.7,8.4,7.6,10.5,8     c2.1,0.3,5-1.9,5.6-2.5c3.1-2.4,4.8-0.6,6.2,0.2c1.4,0.8,7.8,4.8,9.8,6.1c1.9,1.3,1.7,3.4,1.7,3.4s-1.3,3.9-4.3,6.8     c-0.7,0.7-2,1.6-5.1,1.6c-3.1,0-6.5-0.6-14.5-5c-6.5-3.6-12.7-9.2-16-12.5C35.2,57.8,29.5,51.2,25.7,44.3z"
-                      />
-                    </g>
-                  </g>
-                </g>
+                <path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z" />
               </svg>
             </Link>
           </div>
@@ -779,12 +651,27 @@ export default function Home() {
                 <Link href="https://www.offbeatx.com/" className="">
                   Offbeat
                 </Link>
-                <Link href="/privacy" rel="external nofollow noopener"
-              target="_blank">Privacy-policy</Link>
-                <Link href="/refund" rel="external nofollow noopener"
-              target="_blank">Refund-policy</Link>
-                <Link href="/termsconditions" rel="external nofollow noopener"
-              target="_blank">Terms & Conditions</Link>
+                <Link
+                  href="/privacy"
+                  rel="external nofollow noopener"
+                  target="_blank"
+                >
+                  Privacy-policy
+                </Link>
+                <Link
+                  href="/refund"
+                  rel="external nofollow noopener"
+                  target="_blank"
+                >
+                  Refund-policy
+                </Link>
+                <Link
+                  href="/termsconditions"
+                  rel="external nofollow noopener"
+                  target="_blank"
+                >
+                  Terms & Conditions
+                </Link>
               </div>
               <div>
                 <h1 className="text-xl font-bold">Connect with Us</h1>
@@ -868,14 +755,18 @@ export default function Home() {
               </p>
             </div>
             <div className="flex gap-10">
-              <Link href="">
+              <Link href="https://www.apple.com/app-store/"
+              rel="external nofollow noopener"
+              target="_blank">
                 <Image
                   src={AppStore}
                   alt=""
                   className=" h-[45px] w-[153px]"
                 ></Image>
               </Link>
-              <Link href="">
+              <Link href="https://play.google.com/store/apps?hl=en_US&gl=US"
+              rel="external nofollow noopener"
+              target="_blank">
                 <Image src={PlayStore} alt=""></Image>
               </Link>
             </div>
