@@ -33,10 +33,10 @@ import CountUp from "react-countup";
 import ScrollTrigger from "react-scroll-trigger";
 import { useState } from "react";
 import Header from "@/components/Header";
-import VerifiedProfessional from "@/public/Verified Professional.png"
-import AdManagement from "@/public/Ad Management.png"
-import BrandProfile from "@/public/Brand Profile.png"
-import EmployeeManagement from "@/public/Employee Management.png"
+import VerifiedProfessional from "@/public/Verified Professional.png";
+import AdManagement from "@/public/Ad Management.png";
+import BrandProfile from "@/public/Brand Profile.png";
+import EmployeeManagement from "@/public/Employee Management.png";
 
 const inter = Inter({ subsets: ["latin"] });
 const words = `Kaamhai is a revolutionary platform designed to connect blue
@@ -82,7 +82,6 @@ export default function Home() {
     {
       text: "Opportunities",
     },
-    
   ];
   return (
     <main className={`f bg-white ${inter.className}`}>
@@ -183,14 +182,14 @@ export default function Home() {
                         className="text-xl font-bold text-neutral-600 dark:text-white h-[10rem] w-[9rem]"
                       >
                         <Image
-                          className=" dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] object-cover rounded-full group-hover/card:shadow-xl"
+                          className=" dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] object-cover rounded-full"
                           src={VerifiedProfessional}
                           alt=""
                         ></Image>
                       </CardItem>
                       <CardItem className=" text-black">
                         <h1 className=" text-center">
-                          Verified <br/> Professionals
+                          Verified <br /> Professionals
                         </h1>
                       </CardItem>
                     </CardBody>
@@ -202,14 +201,14 @@ export default function Home() {
                         className="text-xl font-bold text-neutral-600 dark:text-white h-[10rem] w-[9rem]"
                       >
                         <Image
-                          className="dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] object-cover rounded-full group-hover/card:shadow-xl"
+                          className="dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] object-cover rounded-full"
                           src={EmployeeManagement}
                           alt=""
                         ></Image>
                       </CardItem>
                       <CardItem className=" text-black">
                         <h1 className=" text-center">
-                        Employee <br/> Management
+                          Employee <br /> Management
                         </h1>
                       </CardItem>
                     </CardBody>
@@ -223,14 +222,14 @@ export default function Home() {
                         className="text-xl font-bold text-neutral-600 dark:text-white h-[10rem] w-[9rem]"
                       >
                         <Image
-                          className=" dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] object-cover rounded-full group-hover/card:shadow-xl"
+                          className=" dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] object-cover rounded-full"
                           src={AdManagement}
                           alt=""
                         ></Image>
                       </CardItem>
                       <CardItem className=" text-black">
                         <h1 className=" text-center">
-                          Ad <br/> Management
+                          Ad <br /> Management
                         </h1>
                       </CardItem>
                     </CardBody>
@@ -242,14 +241,14 @@ export default function Home() {
                         className="text-xl font-bold text-neutral-600 dark:text-white h-[10rem] w-[9rem]"
                       >
                         <Image
-                          className=" dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] object-cover rounded-full group-hover/card:shadow-xl"
+                          className=" dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] object-cover rounded-full"
                           src={BrandProfile}
                           alt=""
                         ></Image>
                       </CardItem>
                       <CardItem className=" text-black">
                         <h1 className=" text-center">
-                          Brand <br/> Profile
+                          Brand <br /> Profile
                         </h1>
                       </CardItem>
                     </CardBody>
@@ -261,7 +260,7 @@ export default function Home() {
           <div className="flex flex-col  items-center justify-center w-screen">
             <h1 className=" text-5xl font-bold text-end leading-normal">
               {/* Caption for Employees */}
-              <TypewriterEffect words={employee}  />
+              <TypewriterEffect words={employee} />
             </h1>
             <div className="flex flex-col lg:flex-row flex-wrap items-center justify-center w-screen">
               <div className=" ">
@@ -276,14 +275,14 @@ export default function Home() {
                         className="text-xl font-bold text-neutral-600 dark:text-white h-[10rem] w-[9rem]"
                       >
                         <Image
-                          className=" dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] object-none object-center rounded-full group-hover/card:shadow-xl"
+                          className=" dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] object-none object-center rounded-full"
                           src={LeaveManagementSystem}
                           alt=""
                         ></Image>
                       </CardItem>
                       <CardItem className=" text-black">
                         <h1 className=" text-center">
-                        Leave Management
+                          Leave Management
                           <br /> System
                         </h1>
                       </CardItem>
@@ -296,7 +295,7 @@ export default function Home() {
                         className="text-xl font-bold text-neutral-600 dark:text-white h-[10rem] w-[9rem]"
                       >
                         <Image
-                          className="dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] object-none object-center rounded-full group-hover/card:shadow-xl"
+                          className="dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] object-none object-center rounded-full "
                           src={AdvancePayTracker}
                           alt=""
                         ></Image>
@@ -318,7 +317,7 @@ export default function Home() {
                         className="text-xl font-bold text-neutral-600 dark:text-white h-[10rem] w-[9rem]"
                       >
                         <Image
-                          className=" dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] object-none object-center rounded-full group-hover/card:shadow-xl"
+                          className=" dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] object-none object-center rounded-full"
                           src={PaymentTrackers}
                           alt=""
                         ></Image>
@@ -338,7 +337,7 @@ export default function Home() {
                         className="text-xl font-bold text-neutral-600 dark:text-white h-[10rem] w-[9rem]"
                       >
                         <Image
-                          className=" dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] object-none object-center rounded-full group-hover/card:shadow-xl"
+                          className=" dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] object-none object-center rounded-full"
                           src={MonthlyPayslip}
                           alt=""
                         ></Image>
@@ -372,7 +371,11 @@ export default function Home() {
             <div className="flex flex-col items-center">
               <h1>Bank Account Verification</h1>
               <div className=" flex items-center justify-center h-[490%] w-[490%]">
-                <Image src={EmployeeCard} alt="" className="pt-48 sm:mt-20"></Image>
+                <Image
+                  src={EmployeeCard}
+                  alt=""
+                  className="pt-48 sm:mt-20"
+                ></Image>
               </div>
             </div>
             <div className="flex flex-col items-start gap-48">
@@ -438,47 +441,49 @@ export default function Home() {
         </div>
       </div>
       {/* About Us */}
-        <div id="about" className="bg-cover bg-[#FFD704]">
-          <div className=" flex flex-col xl:flex-row">
-            <div className="flex relative flex-col font-bold mt-10 sm:mt-40 ml-0 sm:ml-16 text-4xl items-center justify-end">
-              <h1 className=" z-[999]">About Us</h1>
-              <Image src={ScreenImage} alt="" className=" z-[999]"></Image>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="250"
-                height="275"
-                viewBox="0 0 250 275"
-                fill="none"
-                className=" absolute top-10 -left-5"
-              >
-                <path
-                  d="M249.7 209.892C235.591 233.012 215.042 251.368 190.652 262.638C166.262 273.907 139.126 277.585 112.677 273.205C86.2274 268.825 61.6518 256.585 42.0578 238.031C22.4637 219.478 8.73139 195.446 2.59725 168.973C-3.53689 142.5 -1.79731 114.775 7.59599 89.3056C16.9893 63.8359 33.6145 41.7647 55.3691 25.8831C77.1237 10.0015 103.031 1.0227 129.814 0.0822443C156.597 -0.858214 183.054 6.28186 205.839 20.5996L134.5 137.5L249.7 209.892Z"
-                  fill="white"
-                />
-              </svg>
-            </div>
-            <div className="flex flex-col items-center justify-center sm:px-20 md:px-28 lg:px-40 sm:pt-10 xl:w-[70%] pb-16 xl:pl-10 xl:pr-36 2xl:pr-40 gap-16">
-              <div className=" border-b-2 border-black text-wrap text-center p-4  sm:p-0 xl:text-left sm:text-2xl md:text-3xl lg:text-4xl pb-12">
+      <div id="about" className="bg-cover bg-[#FFD704]">
+        <div className=" flex flex-col xl:flex-row">
+          <div className="flex relative flex-col font-bold mt-10 sm:mt-40 ml-0 sm:ml-16 text-4xl items-center justify-end">
+            <h1 className=" z-[999]">About Us</h1>
+            <Image src={ScreenImage} alt="" className=" z-[999]"></Image>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="250"
+              height="275"
+              viewBox="0 0 250 275"
+              fill="none"
+              className=" absolute top-10 -left-5"
+            >
+              <path
+                d="M249.7 209.892C235.591 233.012 215.042 251.368 190.652 262.638C166.262 273.907 139.126 277.585 112.677 273.205C86.2274 268.825 61.6518 256.585 42.0578 238.031C22.4637 219.478 8.73139 195.446 2.59725 168.973C-3.53689 142.5 -1.79731 114.775 7.59599 89.3056C16.9893 63.8359 33.6145 41.7647 55.3691 25.8831C77.1237 10.0015 103.031 1.0227 129.814 0.0822443C156.597 -0.858214 183.054 6.28186 205.839 20.5996L134.5 137.5L249.7 209.892Z"
+                fill="white"
+              />
+            </svg>
+          </div>
+          <div className="flex flex-col items-center justify-center sm:px-20 md:px-28 lg:px-40 sm:pt-10 xl:w-[70%] pb-16 xl:pl-10 xl:pr-36 2xl:pr-40 gap-16">
+            <div className=" border-b-2 border-black text-wrap text-center p-4  sm:p-0 xl:text-left sm:text-2xl md:text-3xl lg:text-4xl pb-12">
               <TextGenerateEffect words={words} />
-              </div>
-              <div className="border-b-2 border-black w-full flex items-center justify-center">
-                <ScrollTrigger onEnter={() => setcounterOn(true)}
-        onExit={() => setcounterOn(false)}>
+            </div>
+            <div className="border-b-2 border-black w-full flex items-center justify-center">
+              <ScrollTrigger
+                onEnter={() => setcounterOn(true)}
+                onExit={() => setcounterOn(false)}
+              >
                 <div className=" text-4xl pb-12 items-center gap-12 sm:gap-20 md:gap-24 lg:gap-32 xl:gap-44 2xl:gap-64 flex flex-row">
                   <div className="flex flex-col items-start text-wrap gap-3">
                     <div>
                       <Image src={VerifiedEmployees} alt=""></Image>
                     </div>
                     <div className=" font-semibold text-2xl sm:text-4xl sm:font-bold">
-                      {counterOn && (
+                      {/* {counterOn && (
                         <CountUp
                           start={728}
                           end={1000}
                           duration={3}
                           delay={0}
                         />
-                      )}
-                      +
+                      )} */}
+                      1000+
                     </div>
                     <div className=" font-normal text-lg text-center sm:font-semibold sm:text-xl">
                       Verified <br /> Employees
@@ -489,15 +494,15 @@ export default function Home() {
                       <Image src={JobPost} alt=""></Image>
                     </div>
                     <div className="font-semibold text-2xl sm:text-4xl sm:font-bold">
-                      {counterOn && (
+                      {/* {counterOn && (
                         <CountUp
                           start={2000}
                           end={2500}
                           duration={4}
                           delay={0}
                         />
-                      )}
-                      +
+                      )} */}
+                      2500+
                     </div>
                     <div className=" font-normal text-lg text-center sm:font-semibold sm:text-xl">
                       Job <br /> Post
@@ -508,21 +513,21 @@ export default function Home() {
                       <Image src={JobSeeker} alt=""></Image>
                     </div>
                     <div className="font-semibold text-2xl sm:text-4xl sm:font-bold">
-                      {counterOn && (
+                      {/* {counterOn && (
                         <CountUp start={126} end={500} duration={3} delay={0} />
-                      )}
-                      +
+                      )} */}
+                      500+
                     </div>
                     <div className=" font-normal text-lg text-center sm:font-semibold sm:text-xl">
                       Job <br /> Seeker
                     </div>
                   </div>
                 </div>
-                </ScrollTrigger>
-              </div>
+              </ScrollTrigger>
             </div>
           </div>
         </div>
+      </div>
       {/* Contact Us */}
       <div
         id="contact"
@@ -751,7 +756,15 @@ export default function Home() {
           </div>
 
           <p className=" text-center">
-            &copy; 2024 <Link href="https://www.offbeatx.com/" className=" font-bold">Offbeat Technet Pvt Ltd</Link> All rights reserved. Technology partner <Link href="https://www.nityom.com" className=" font-bold">Nityom</Link>.
+            &copy; 2024{" "}
+            <Link href="https://www.offbeatx.com/" className=" font-bold">
+              Offbeat Technet Pvt Ltd
+            </Link>{" "}
+            All rights reserved. Technology partner{" "}
+            <Link href="https://www.nityom.com" className=" font-bold">
+              Nityom
+            </Link>
+            .
           </p>
         </div>
       </footer>

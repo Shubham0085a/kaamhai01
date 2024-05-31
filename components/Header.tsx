@@ -179,7 +179,9 @@ export default function Example() {
                   <Image src={AppStore} alt="" className=" h-[3.2rem] w-auto" />
                 </a>
                 <a
-                  href="#"
+                  href="https://play.google.com/store/apps/details?id=com.kaamhai"
+                  rel="external nofollow noopener"
+                  target="_blank"
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   <Image src={PlayStore} alt="" />
