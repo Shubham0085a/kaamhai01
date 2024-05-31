@@ -7,7 +7,7 @@ const NUM_CIRCLES = 6;
 
 const Ripple = React.memo(() => {
   return (
-    <div className="absolute left-1/2 top-[110%] h-full w-full overflow-visible">
+    <div className="absolute left-1/2 top-[105%] h-full w-full overflow-visible">
       {Array.from({ length: NUM_CIRCLES }, (_, i) => (
         <div
           key={i}
