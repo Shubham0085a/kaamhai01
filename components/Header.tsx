@@ -117,7 +117,7 @@ export default function Example() {
               rel="external nofollow noopener"
               target="_blank" className="text-sm font-semibold leading-6 text-gray-900">
             <Image src={AppStore} alt="" className="h-[2.90rem] w-40"/>
-          </a><a href="https://play.google.com/store/apps?hl=en_US&gl=US"
+          </a><a href="https://play.google.com/store/apps/details?id=com.kaamhai"
               rel="external nofollow noopener"
               target="_blank" className="text-sm font-semibold leading-6 text-gray-900">
             <Image src={PlayStore} alt="" />

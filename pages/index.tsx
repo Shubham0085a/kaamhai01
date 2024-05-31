@@ -1,8 +1,6 @@
 "use client";
 import Image from "next/image";
 import { Inter } from "next/font/google";
-import NavPng from "@/public/nav.png";
-import ScanQR from "@/public/scan.png";
 import Group1 from "@/public/Group 1.png";
 import ScreenImage from "@/public/Screenshot.png";
 import JobPost from "@/public/Job Posts.png";
@@ -12,7 +10,6 @@ import PaymentTrackers from "@/public/Payment Trackers.png";
 import MonthlyPayslip from "@/public/Monthly Payslip.png";
 import Kochi from "@/public/Kochi.png";
 import cuate from "@/public/cuate.png";
-import kaamhailogo from "@/public/kaamhai-logo.png";
 import Employees from "@/public/employees.png";
 import Employer from "@/public/employer.png";
 import PlayStore from "@/public/Google Play Badge.png";
@@ -27,7 +24,6 @@ import Marquee from "react-fast-marquee";
 import Ripple from "@/components/ripple";
 import CityRipple from "@/components/cityripple";
 import Link from "next/link";
-import Bee from "@/public/Bee.png";
 import Logo from "@/public/logo.png";
 import { TextGenerateEffect } from "@/components/text-generate-effect";
 import { Highlight } from "@/components/highlight";
@@ -37,6 +33,10 @@ import CountUp from "react-countup";
 import ScrollTrigger from "react-scroll-trigger";
 import { useState } from "react";
 import Header from "@/components/Header";
+import VerifiedProfessional from "@/public/Verified Professional.png"
+import AdManagement from "@/public/Ad Management.png"
+import BrandProfile from "@/public/Brand Profile.png"
+import EmployeeManagement from "@/public/Employee Management.png"
 
 const inter = Inter({ subsets: ["latin"] });
 const words = `Kaamhai is a revolutionary platform designed to connect blue
@@ -71,14 +71,18 @@ export default function Home() {
   ];
   const employee = [
     {
-      text: "Caption",
+      text: "Connecting",
     },
     {
-      text: "for",
+      text: "you",
     },
     {
-      text: "Employees",
+      text: "to",
     },
+    {
+      text: "Opportunities",
+    },
+    
   ];
   return (
     <main className={`f bg-white ${inter.className}`}>
@@ -105,7 +109,7 @@ export default function Home() {
                 <input
                   type="search"
                   name="search"
-                  placeholder="Enter employee Unique ID here"
+                  placeholder="Coming soon..."
                   className=" w-[20rem] sm:w-[30rem] focus:outline-none ml-4"
                 />
                 <button
@@ -119,39 +123,39 @@ export default function Home() {
           </div>
         </div>
         {/* Scroll Section */}
-        <div className=" bg-[#FFD704] border flex border-black border-t-4 border-b-4 border-l-0 border-r-0 w-full h-20">
+        <div className=" bg-[#FFD704] border flex border-black border-t-4 border-b-4 border-l-0 border-r-0 w-full h-[3.5rem] sm:h-20">
           <Marquee>
-            <div className=" mr-10 font-bold text-5xl uppercase">
+            <div className=" mr-10 font-bold text-4xl sm:text-5xl uppercase">
               <h1>Empowerment</h1>
             </div>
             <div className=" mr-10">
               <IoIosStar />
             </div>
-            <div className=" mr-10 font-bold text-5xl uppercase">
+            <div className=" mr-10 font-bold text-4xl sm:text-5xl uppercase">
               <h1>Accessibility</h1>
             </div>
             <div className=" mr-10">
               <IoIosStar />
             </div>
-            <div className=" mr-10 font-bold text-5xl uppercase">
+            <div className=" mr-10 font-bold text-4xl sm:text-5xl uppercase">
               <h1>Efficiency</h1>
             </div>
             <div className=" mr-10">
               <IoIosStar />
             </div>
-            <div className=" mr-10 font-bold text-5xl uppercase">
+            <div className=" mr-10 font-bold text-4xl sm:text-5xl uppercase">
               <h1>Empowerment</h1>
             </div>
             <div className=" mr-10">
               <IoIosStar />
             </div>
-            <div className=" mr-10 font-bold text-5xl uppercase">
+            <div className=" mr-10 font-bold text-4xl sm:text-5xl uppercase">
               <h1>Accessibility</h1>
             </div>
             <div className=" mr-10">
               <IoIosStar />
             </div>
-            <div className=" mr-10 font-bold text-5xl uppercase">
+            <div className=" mr-10 font-bold text-4xl sm:text-5xl uppercase">
               <h1>Efficiency</h1>
             </div>
             <div className=" mr-10">
@@ -160,9 +164,9 @@ export default function Home() {
           </Marquee>
         </div>
         {/* Business Operations */}
-        <div className="bg-[linear-gradient(180deg,_#F4F4F4_0%,_#FFFFFF_100%)] w-screen">
+        <div className="bg-[linear-gradient(180deg,_#F4F4F4_0%,_#FFFFFF_100%)] flex flex-col gap-10 w-screen">
           <div className="flex flex-col items-center justify-center">
-            <h1 className=" text-5xl font-bold text-start leading-normal">
+            <h1 className=" text-5xl font-bold pb-5 text-start leading-normal">
               {/* Simplify Your Business Operations <br /> with Ease! */}
               <TypewriterEffect words={empolyers} />
             </h1>
@@ -179,15 +183,14 @@ export default function Home() {
                         className="text-xl font-bold text-neutral-600 dark:text-white h-[10rem] w-[9rem]"
                       >
                         <Image
-                          className=" dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] object-none object-center rounded-full group-hover/card:shadow-xl"
-                          src={LeaveManagementSystem}
+                          className=" dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] object-cover rounded-full group-hover/card:shadow-xl"
+                          src={VerifiedProfessional}
                           alt=""
                         ></Image>
                       </CardItem>
                       <CardItem className=" text-black">
                         <h1 className=" text-center">
-                          Leave Management
-                          <br /> System
+                          Verified <br/> Professionals
                         </h1>
                       </CardItem>
                     </CardBody>
@@ -199,21 +202,20 @@ export default function Home() {
                         className="text-xl font-bold text-neutral-600 dark:text-white h-[10rem] w-[9rem]"
                       >
                         <Image
-                          className="dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] object-none object-center rounded-full group-hover/card:shadow-xl"
-                          src={AdvancePayTracker}
+                          className="dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] object-cover rounded-full group-hover/card:shadow-xl"
+                          src={EmployeeManagement}
                           alt=""
                         ></Image>
                       </CardItem>
                       <CardItem className=" text-black">
                         <h1 className=" text-center">
-                          Advance Pay
-                          <br /> Tracker
+                        Employee <br/> Management
                         </h1>
                       </CardItem>
                     </CardBody>
                   </CardContainer>
                 </div>
-                <div className="flex flex-row gap-10 items-center">
+                <div className="flex flex-row items-center">
                   <CardContainer className="inter-var">
                     <CardBody className="bg-gray-50 relative group/card flex items-center justify-center flex-col gap-10 dark:bg-[linear-gradient(180deg,_#F4F4F4_0%,_#FFFFFF_100%)] dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[17rem] rounded-xl  border  ">
                       <CardItem
@@ -221,35 +223,33 @@ export default function Home() {
                         className="text-xl font-bold text-neutral-600 dark:text-white h-[10rem] w-[9rem]"
                       >
                         <Image
-                          className=" dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] object-none object-center rounded-full group-hover/card:shadow-xl"
-                          src={PaymentTrackers}
+                          className=" dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] object-cover rounded-full group-hover/card:shadow-xl"
+                          src={AdManagement}
                           alt=""
                         ></Image>
                       </CardItem>
                       <CardItem className=" text-black">
                         <h1 className=" text-center">
-                          Payment
-                          <br /> Trackers
+                          Ad <br/> Management
                         </h1>
                       </CardItem>
                     </CardBody>
                   </CardContainer>
-                  <CardContainer className="inter-var pt-24">
+                  <CardContainer className="inter-var pt-16">
                     <CardBody className="bg-gray-50 flex flex-col-reverse gap-16 items-center relative group/card  dark:bg-[linear-gradient(180deg,_#F4F4F4_0%,_#FFFFFF_100%)] dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[17rem] h-auto rounded-xl p-6 border  ">
                       <CardItem
                         translateZ="50"
                         className="text-xl font-bold text-neutral-600 dark:text-white h-[10rem] w-[9rem]"
                       >
                         <Image
-                          className=" dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] object-none object-center rounded-full group-hover/card:shadow-xl"
-                          src={MonthlyPayslip}
+                          className=" dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] object-cover rounded-full group-hover/card:shadow-xl"
+                          src={BrandProfile}
                           alt=""
                         ></Image>
                       </CardItem>
                       <CardItem className=" text-black">
                         <h1 className=" text-center">
-                          Monthly
-                          <br /> Payslip
+                          Brand <br/> Profile
                         </h1>
                       </CardItem>
                     </CardBody>
@@ -261,7 +261,7 @@ export default function Home() {
           <div className="flex flex-col  items-center justify-center w-screen">
             <h1 className=" text-5xl font-bold text-end leading-normal">
               {/* Caption for Employees */}
-              <TypewriterEffect words={employee} className=" mb-10"/>
+              <TypewriterEffect words={employee}  />
             </h1>
             <div className="flex flex-col lg:flex-row flex-wrap items-center justify-center w-screen">
               <div className=" ">
@@ -283,7 +283,7 @@ export default function Home() {
                       </CardItem>
                       <CardItem className=" text-black">
                         <h1 className=" text-center">
-                          Leave Management
+                        Leave Management
                           <br /> System
                         </h1>
                       </CardItem>
@@ -358,12 +358,12 @@ export default function Home() {
         </div>
       </div>
       {/* Employee card */}
-      <div className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-lg border bg-black p-20 md:shadow-xl">
+      <div className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-lg border bg-black p-5 sm:p-20 md:shadow-xl">
         <div className=" z-10">
           <p className="z-10 whitespace-pre-wrap text-center text-5xl font-medium tracking-tighter text-white">
             Get Your Employee card now !
           </p>
-          <div className="text-[#FFD704] sm:text-3xl sm:font-semibold flex items-center justify-between gap-20 mt-20">
+          <div className="text-[#FFD704] sm:text-3xl sm:font-semibold p-5 sm:p-0 flex items-center justify-between gap-14 sm:gap-20 mt0 sm:mt-20">
             <div className="flex flex-col items-start gap-48">
               <h1>Profile Verification</h1>
               <h1>Face Verification</h1>
@@ -371,8 +371,8 @@ export default function Home() {
             </div>
             <div className="flex flex-col items-center">
               <h1>Bank Account Verification</h1>
-              <div className=" flex items-center justify-center h-[350%] w-[350%]">
-              <Image src={EmployeeCard} alt="" className=" mt-20"></Image>
+              <div className=" flex items-center justify-center h-[490%] w-[490%]">
+                <Image src={EmployeeCard} alt="" className="pt-48 sm:mt-20"></Image>
               </div>
             </div>
             <div className="flex flex-col items-start gap-48">
@@ -386,8 +386,8 @@ export default function Home() {
       </div>
       {/* Hero Description */}
       <div className="bg-[linear-gradient(180deg,_#F4F4F4_0%,_#FFFFFF_100%)]">
-        <div className="flex flex-col lg:flex-row pt-10 items-center px-10 justify-center">
-          <div className="flex flex-col w-[80%] md:w-[70%] lg:w-[60%] xl:w-[47%] 2xl:w-[47%] xl:mt-10">
+        <div className="flex flex-col lg:flex-row pt-10 items-center px-4 justify-center">
+          <div className="flex flex-col w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] xl:w-[47%] 2xl:w-[47%] xl:mt-10">
             <h1 className="font-extrabold text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-8xl leading-snug capitalize text-[#9E9E9E] text-wrap">
               We&#39;ll help you make{" "}
               <span className=" text-black bg-vector1 bg-no-repeat bg-contain bg-center">
@@ -396,8 +396,8 @@ export default function Home() {
               hiring decisions
             </h1>
             <p className="text-3xl leading-snug items-center justify-center">
-              To access the app, just open the link we&#39;ll send you{" "}
-              <Highlight className=" italic">via SMS.</Highlight>
+              Download our app and start{" "}
+              <Highlight className=" italic">Hiring now.</Highlight>
             </p>
           </div>
           <div className="xl:ml-[-10rem] xl:mb-32 2xl:ml-[-12rem] 2xl:mb-36">
@@ -438,13 +438,9 @@ export default function Home() {
         </div>
       </div>
       {/* About Us */}
-      <ScrollTrigger
-        onEnter={() => setcounterOn(true)}
-        onExit={() => setcounterOn(false)}
-      >
         <div id="about" className="bg-cover bg-[#FFD704]">
           <div className=" flex flex-col xl:flex-row">
-            <div className="flex relative flex-col font-bold mt-10 sm:mt-40 ml-16 text-4xl items-center justify-end">
+            <div className="flex relative flex-col font-bold mt-10 sm:mt-40 ml-0 sm:ml-16 text-4xl items-center justify-end">
               <h1 className=" z-[999]">About Us</h1>
               <Image src={ScreenImage} alt="" className=" z-[999]"></Image>
               <svg
@@ -462,59 +458,71 @@ export default function Home() {
               </svg>
             </div>
             <div className="flex flex-col items-center justify-center sm:px-20 md:px-28 lg:px-40 sm:pt-10 xl:w-[70%] pb-16 xl:pl-10 xl:pr-36 2xl:pr-40 gap-16">
-              <div className=" border-b-2 border-black text-wrap text-center p-4 sm:p-0 xl:text-left sm:text-2xl md:text-3xl lg:text-4xl pb-12">
-                {counterOn && <TextGenerateEffect words={words} />}
+              <div className=" border-b-2 border-black text-wrap text-center p-4  sm:p-0 xl:text-left sm:text-2xl md:text-3xl lg:text-4xl pb-12">
+              <TextGenerateEffect words={words} />
               </div>
               <div className="border-b-2 border-black w-full flex items-center justify-center">
-              <div className=" text-4xl pb-12 items-center gap-5 sm:gap-20 md:gap-24 lg:gap-32 xl:gap-44 2xl:gap-64 flex flex-row">
-                <div className="flex flex-col items-start text-wrap gap-10">
-                  <div>
-                    <Image src={VerifiedEmployees} alt=""></Image>
+                <ScrollTrigger onEnter={() => setcounterOn(true)}
+        onExit={() => setcounterOn(false)}>
+                <div className=" text-4xl pb-12 items-center gap-12 sm:gap-20 md:gap-24 lg:gap-32 xl:gap-44 2xl:gap-64 flex flex-row">
+                  <div className="flex flex-col items-start text-wrap gap-3">
+                    <div>
+                      <Image src={VerifiedEmployees} alt=""></Image>
+                    </div>
+                    <div className=" font-semibold text-2xl sm:text-4xl sm:font-bold">
+                      {counterOn && (
+                        <CountUp
+                          start={728}
+                          end={1000}
+                          duration={3}
+                          delay={0}
+                        />
+                      )}
+                      +
+                    </div>
+                    <div className=" font-normal text-lg text-center sm:font-semibold sm:text-xl">
+                      Verified <br /> Employees
+                    </div>
                   </div>
-                  <div className=" font-semibold sm:font-bold">
-                    {counterOn && (
-                      <CountUp start={728} end={1000} duration={3} delay={0} />
-                    )}
-                    +
+                  <div className="flex flex-col items-start justify-between text-wrap gap-3">
+                    <div>
+                      <Image src={JobPost} alt=""></Image>
+                    </div>
+                    <div className="font-semibold text-2xl sm:text-4xl sm:font-bold">
+                      {counterOn && (
+                        <CountUp
+                          start={2000}
+                          end={2500}
+                          duration={4}
+                          delay={0}
+                        />
+                      )}
+                      +
+                    </div>
+                    <div className=" font-normal text-lg text-center sm:font-semibold sm:text-xl">
+                      Job <br /> Post
+                    </div>
                   </div>
-                  <div className=" font-normal text-lg text-center sm:font-semibold sm:text-xl">
-                    Verified <br /> Employees
+                  <div className="flex flex-col items-start justify-between text-wrap gap-3">
+                    <div>
+                      <Image src={JobSeeker} alt=""></Image>
+                    </div>
+                    <div className="font-semibold text-2xl sm:text-4xl sm:font-bold">
+                      {counterOn && (
+                        <CountUp start={126} end={500} duration={3} delay={0} />
+                      )}
+                      +
+                    </div>
+                    <div className=" font-normal text-lg text-center sm:font-semibold sm:text-xl">
+                      Job <br /> Seeker
+                    </div>
                   </div>
                 </div>
-                <div className="flex flex-col items-start justify-between text-wrap gap-10">
-                  <div>
-                    <Image src={JobPost} alt=""></Image>
-                  </div>
-                  <div className="font-semibold sm:font-bold">
-                    {counterOn && (
-                      <CountUp start={2000} end={2500} duration={4} delay={0} />
-                    )}
-                    +
-                  </div>
-                  <div className=" font-normal text-lg text-center sm:font-semibold sm:text-xl">
-                    Job <br /> Post
-                  </div>
-                </div>
-                <div className="flex flex-col items-start justify-between text-wrap gap-10">
-                  <div>
-                    <Image src={JobSeeker} alt=""></Image>
-                  </div>
-                  <div className="font-semibold sm:font-bold">
-                    {counterOn && (
-                      <CountUp start={126} end={500} duration={3} delay={0} />
-                    )}
-                    +
-                  </div>
-                  <div className=" font-normal text-lg text-center sm:font-semibold sm:text-xl">
-                    Job <br /> Seeker
-                  </div>
-                </div>
-              </div>
+                </ScrollTrigger>
               </div>
             </div>
           </div>
         </div>
-      </ScrollTrigger>
       {/* Contact Us */}
       <div
         id="contact"
@@ -523,17 +531,17 @@ export default function Home() {
         <div className=" pl-10">
           <Image src={cuate} alt=""></Image>
         </div>
-        <div className="flex flex-col items-end justify-end p-4 capitalize gap-6">
-          <h1 className=" text-5xl font-bold text-right rtl:text-left leading-snug">
+        <div className="flex flex-col items-center sm:items-end justify-center sm:justify-end p-4 capitalize gap-6">
+          <h1 className=" text-5xl font-bold text-center sm:text-right sm:rtl:text-left leading-snug">
             Our support team is <br />{" "}
             <span className=" italic">active 24x7</span>
           </h1>
-          <p className=" font-medium text-2xl text-right rtl:text-left leading-snug">
+          <p className=" font-medium text-2xl text-center sm:text-right sm:rtl:text-left leading-snug">
             Feel free to chat with our support team whenever <br /> you need
             more clarity
           </p>
           <div className=" flex flex-row gap-5">
-            <Link href="/">
+            <Link href="https://wa.me/917090121000">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 height="48"
@@ -554,7 +562,7 @@ export default function Home() {
                 <path d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z" />
               </svg>
             </Link>
-            <Link href="/">
+            <Link href="tel:+917090121000">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 height="48"
@@ -633,7 +641,7 @@ export default function Home() {
                 </div>
                 <p className="text-xl pt-5 font-bold">Connect with Us</p>
                 <div className="flex flex-row h-10 w-10 gap-3 mt-4">
-                  <Link href="https://web.whatsapp.com/">
+                  <Link href="https://wa.me/917090121000">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       height="48"
@@ -646,7 +654,7 @@ export default function Home() {
                       />
                     </svg>
                   </Link>
-                  <Link href="https://x.com/">
+                  <Link href="https://x.com/KaamHai_in?t=vlgjo84JRfAxSdSEv44ExQ&s=09">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       height="48"
@@ -659,7 +667,7 @@ export default function Home() {
                       />
                     </svg>
                   </Link>
-                  <Link href="https://www.youtube.com/">
+                  {/* <Link href="https://www.youtube.com/">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       height="48"
@@ -671,8 +679,18 @@ export default function Home() {
                         d="M282 256.2l-95.2-54.1V310.3L282 256.2zM384 32H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64zm14.4 136.1c7.6 28.6 7.6 88.2 7.6 88.2s0 59.6-7.6 88.1c-4.2 15.8-16.5 27.7-32.2 31.9C337.9 384 224 384 224 384s-113.9 0-142.2-7.6c-15.7-4.2-28-16.1-32.2-31.9C42 315.9 42 256.3 42 256.3s0-59.7 7.6-88.2c4.2-15.8 16.5-28.2 32.2-32.4C110.1 128 224 128 224 128s113.9 0 142.2 7.7c15.7 4.2 28 16.6 32.2 32.4z"
                       />
                     </svg>
+                  </Link> */}
+                  <Link href="https://www.instagram.com/kaamhai.in?igsh=MWU5ajF0Z3V5NzlqNg==">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="48"
+                      width="48"
+                      viewBox="0 0 448 512"
+                    >
+                      <path d="M194.4 211.7a53.3 53.3 0 1 0 59.3 88.7 53.3 53.3 0 1 0 -59.3-88.7zm142.3-68.4c-5.2-5.2-11.5-9.3-18.4-12c-18.1-7.1-57.6-6.8-83.1-6.5c-4.1 0-7.9 .1-11.2 .1c-3.3 0-7.2 0-11.4-.1c-25.5-.3-64.8-.7-82.9 6.5c-6.9 2.7-13.1 6.8-18.4 12s-9.3 11.5-12 18.4c-7.1 18.1-6.7 57.7-6.5 83.2c0 4.1 .1 7.9 .1 11.1s0 7-.1 11.1c-.2 25.5-.6 65.1 6.5 83.2c2.7 6.9 6.8 13.1 12 18.4s11.5 9.3 18.4 12c18.1 7.1 57.6 6.8 83.1 6.5c4.1 0 7.9-.1 11.2-.1c3.3 0 7.2 0 11.4 .1c25.5 .3 64.8 .7 82.9-6.5c6.9-2.7 13.1-6.8 18.4-12s9.3-11.5 12-18.4c7.2-18 6.8-57.4 6.5-83c0-4.2-.1-8.1-.1-11.4s0-7.1 .1-11.4c.3-25.5 .7-64.9-6.5-83l0 0c-2.7-6.9-6.8-13.1-12-18.4zm-67.1 44.5A82 82 0 1 1 178.4 324.2a82 82 0 1 1 91.1-136.4zm29.2-1.3c-3.1-2.1-5.6-5.1-7.1-8.6s-1.8-7.3-1.1-11.1s2.6-7.1 5.2-9.8s6.1-4.5 9.8-5.2s7.6-.4 11.1 1.1s6.5 3.9 8.6 7s3.2 6.8 3.2 10.6c0 2.5-.5 5-1.4 7.3s-2.4 4.4-4.1 6.2s-3.9 3.2-6.2 4.2s-4.8 1.5-7.3 1.5l0 0c-3.8 0-7.5-1.1-10.6-3.2zM448 96c0-35.3-28.7-64-64-64H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96zM357 389c-18.7 18.7-41.4 24.6-67 25.9c-26.4 1.5-105.6 1.5-132 0c-25.6-1.3-48.3-7.2-67-25.9s-24.6-41.4-25.8-67c-1.5-26.4-1.5-105.6 0-132c1.3-25.6 7.1-48.3 25.8-67s41.5-24.6 67-25.8c26.4-1.5 105.6-1.5 132 0c25.6 1.3 48.3 7.1 67 25.8s24.6 41.4 25.8 67c1.5 26.3 1.5 105.4 0 131.9c-1.3 25.6-7.1 48.3-25.8 67z" />
+                    </svg>
                   </Link>
-                  <Link href="https://www.facebook.com/">
+                  <Link href="https://www.facebook.com/kaamhai.in?mibextid=JRoKGi">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       height="48"
@@ -685,7 +703,7 @@ export default function Home() {
                       />
                     </svg>
                   </Link>
-                  <Link href="https://www.linkedin.com/">
+                  <Link href="https://www.linkedin.com/company/kaamhai/">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       height="48"
@@ -721,7 +739,7 @@ export default function Home() {
                     ></Image>
                   </Link>
                   <Link
-                    href="https://play.google.com/store/apps?hl=en_US&gl=US"
+                    href="https://play.google.com/store/apps/details?id=com.kaamhai"
                     rel="external nofollow noopener"
                     target="_blank"
                   >
@@ -733,8 +751,7 @@ export default function Home() {
           </div>
 
           <p className=" text-center">
-            &copy; 2024 <span className=" font-bold">Kaamhai</span>. All rights
-            reserved.
+            &copy; 2024 <Link href="https://www.offbeatx.com/" className=" font-bold">Offbeat Technet Pvt Ltd</Link> All rights reserved. Technology partner <Link href="https://www.nityom.com" className=" font-bold">Nityom</Link>.
           </p>
         </div>
       </footer>
