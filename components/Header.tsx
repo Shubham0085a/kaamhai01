@@ -101,7 +101,7 @@ export default function Example() {
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
-        <PopoverGroup className="hidden lg:flex lg:gap-x-12 ml-0"> 
+        <PopoverGroup className="hidden lg:flex lg:gap-x-12 -ml-6"> 
           <a href="#" className=" text-base hover:font-bold hover:text-black font-semibold leading-6 text-gray-600">
             Home
           </a>

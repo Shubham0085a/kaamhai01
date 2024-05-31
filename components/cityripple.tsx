@@ -7,7 +7,7 @@ const NUM_CIRCLES = 3;
 
 const CityRipple = React.memo(() => {
   return (
-    <div className="absolute left-1/2 top-28 h-full w-full overflow-visible">
+    <div className="absolute left-1/2 top-28 h-full w-auto overflow-visible">
       {Array.from({ length: NUM_CIRCLES }, (_, i) => (
         <div
           key={i}
